@@ -1,0 +1,37 @@
+#random word selector 
+#score keeper
+#translator
+
+word_to_guess = "antogonized"
+
+how_many_letters = len(word_to_guess)
+
+l_word = []
+for l in word_to_guess:
+	l_word.append(l)
+
+l_result = []
+for l in word_to_guess:
+	l_result.append("_ ")
+
+print(l_result)
+
+while l_result != l_word:
+	letter = input("type one letter: \n")
+	if letter in l_word:
+		#l_result[word_to_guess.find(letter)] = str(letter.upper())
+		j = 0
+		for x in l_word:
+			if x == letter:
+				l_result[j] = str(letter)
+			j = j + 1
+		f_word = ''
+		s = 0
+		for i in l_result:
+			f_word = f_word + l_result[s]
+			s = s + 1
+		print(f_word)
+
+
+
+print("SUCCESS!!")
